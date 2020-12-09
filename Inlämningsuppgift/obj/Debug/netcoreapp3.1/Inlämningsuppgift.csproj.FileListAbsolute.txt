@@ -1,0 +1,13 @@
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\bin\Debug\netcoreapp3.1\Inlämningsuppgift.exe
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\bin\Debug\netcoreapp3.1\Inlämningsuppgift.deps.json
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\bin\Debug\netcoreapp3.1\Inlämningsuppgift.runtimeconfig.json
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\bin\Debug\netcoreapp3.1\Inlämningsuppgift.runtimeconfig.dev.json
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\bin\Debug\netcoreapp3.1\Inlämningsuppgift.dll
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\bin\Debug\netcoreapp3.1\Inlämningsuppgift.pdb
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\obj\Debug\netcoreapp3.1\Inlämningsuppgift.csprojAssemblyReference.cache
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\obj\Debug\netcoreapp3.1\Inlämningsuppgift.AssemblyInfoInputs.cache
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\obj\Debug\netcoreapp3.1\Inlämningsuppgift.AssemblyInfo.cs
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\obj\Debug\netcoreapp3.1\Inlämningsuppgift.csproj.CoreCompileInputs.cache
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\obj\Debug\netcoreapp3.1\Inlämningsuppgift.dll
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\obj\Debug\netcoreapp3.1\Inlämningsuppgift.pdb
+C:\Users\Moa\Documents\GitHub\CommandPatternAssignment\Inlämningsuppgift\obj\Debug\netcoreapp3.1\Inlämningsuppgift.genruntimeconfig.cache
