@@ -12,9 +12,10 @@ namespace Inlämningsuppgift
             this.receiver = receiver;
         }
         public abstract void Execute();
+        public abstract void UnExecute();
     }
-    public enum CommandOption
-    {
-        Wish, UnWish, ReWish, Submit
-    }
+    //public enum CommandOption
+    //{
+    //    Wish, UnWish, ReWish, Submit
+    //}
 }
