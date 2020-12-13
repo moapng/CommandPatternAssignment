@@ -19,7 +19,7 @@ namespace Inlämningsuppgift
         public void MakeAWish()
         {
             letterToSanta.Add(_wish);
-            Console.WriteLine(_wish + " has been added, these are the rest of your wishes");
+            Console.WriteLine(_wish + " has been added");
             PrintLetterToSanta();
         }
 
@@ -28,7 +28,7 @@ namespace Inlämningsuppgift
             letterToSanta.Remove(_wish);
             
             unWishStack.Push(_wish);
-            Console.WriteLine(_wish + " has been removed, these are the wishes you still have left");
+            Console.WriteLine(_wish + " has been removed");
             PrintLetterToSanta();
         }
 
@@ -45,6 +45,7 @@ namespace Inlämningsuppgift
         }
         public void PrintLetterToSanta()
         {
+            Console.WriteLine("These are your wishes");
             foreach (string wish in letterToSanta)
             {
                 Console.WriteLine(wish);
