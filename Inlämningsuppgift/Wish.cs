@@ -5,18 +5,18 @@ using System.Text;
 
 namespace Inlämningsuppgift
 {
-    public class WishList
+    public class Wish
     {
         private string _wish;
-        Stack<string> unWishStack = new Stack<string>();
-        public List<string> letterToSanta = new List<string>() { "båt", "ps5" };
+        public Stack<string> unWishStack = new Stack<string>();
+        public List<string> letterToSanta = new List<string>();
 
-        public WishList(string wish)
+        public Wish(string wish)
         {
             _wish = wish;
         }
 
-        public void Wish()
+        public void MakeAWish()
         {
             letterToSanta.Add(_wish);
             Console.WriteLine(_wish + " has been added, these are the rest of your wishes");
@@ -34,8 +34,9 @@ namespace Inlämningsuppgift
 
         public void ReWish()
         {
+            Console.WriteLine("rewishing latest unwish");
             _wish = unWishStack.Pop();
-            Wish();
+            MakeAWish();
         }
         public void Submit()
         {

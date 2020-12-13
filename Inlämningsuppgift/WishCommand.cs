@@ -6,31 +6,31 @@ namespace Inlämningsuppgift
 {
     class WishCommand : Command
     {
-        private WishList _wishList;
-        public WishCommand(WishList wishList) : base(wishList)
+        private Wish _wish;
+        public WishCommand(Wish wish) : base(wish)
         {
-            _wishList = wishList;
+            _wish = wish;
         }
         public override void Execute()
         {
-            _wishList.Wish();
+            _wish.MakeAWish();
         }
         public override void UnExecute()
         {
-            _wishList.UnWish();
+            _wish.UnWish();
         }
     }
     
     class ReWishCommand : Command
     {
-        private WishList _wishList;
-        public ReWishCommand(WishList wishList) : base(wishList)
+        private Wish _wish;
+        public ReWishCommand(Wish wish) : base(wish)
         {
-            _wishList = wishList;
+            _wish = wish;
         }
         public override void Execute()
         {
-            _wishList.ReWish();
+            _wish.ReWish();
         }
         public override void UnExecute()
         {
@@ -39,14 +39,14 @@ namespace Inlämningsuppgift
     }
     class SubmitCommand : Command
     {
-        private WishList _wishList;
-        public SubmitCommand(WishList wishList) : base(wishList)
+        private Wish _wish;
+        public SubmitCommand(Wish wish) : base(wish)
         {
-            _wishList = wishList;
+            _wish = wish;
         }
         public override void Execute()
         {
-            _wishList.Submit();
+            _wish.Submit();
         }
         public override void UnExecute()
         {

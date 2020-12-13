@@ -6,24 +6,24 @@ namespace Inlämningsuppgift
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("make a wish bish");
-            string userInput = Console.ReadLine();
-            var wishList = new WishList(userInput);
-            var wishCommand = new WishCommand(wishList);
-            var reWishCommand = new ReWishCommand(wishList);
-            var submitCommand = new SubmitCommand(wishList);
-            var invoker = new Invoker();
-            invoker.SetCommand(wishCommand);
+
+            
+            
             while (true)
             {
-                
-                
-                Console.WriteLine("Would you like to make another wish (1)," +
-                    " unwish (2) or rewish (3) something, or send your letter to santa (4)?");
+                Console.WriteLine("Make a wish!");
+                string userInput = Console.ReadLine();
+                var wish = new Wish(userInput);
+                var wishCommand = new WishCommand(wish);
+                var reWishCommand = new ReWishCommand(wish);
+                var submitCommand = new SubmitCommand(wish);
+                var invoker = new Invoker();
+                Console.WriteLine("Would you like to make a new wish (1), unwish (2) latest wish, rewish (3) latest unwishing, or send your letter to santa (4)?");
                 var choice = Console.ReadKey();
                 switch (choice.Key)
                 {
                     case ConsoleKey.D1:
+                        userInput = Console.ReadLine();
                         invoker.SetCommand(wishCommand);
                         invoker.Execute();
                         break;
@@ -32,6 +32,7 @@ namespace Inlämningsuppgift
                         invoker.UnExecute();
                         break;
                     case ConsoleKey.D3:
+                        Console.WriteLine("rewishing your latest un-wish");
                         invoker.SetCommand(reWishCommand);
                         invoker.Execute();
                         break;
@@ -40,7 +41,7 @@ namespace Inlämningsuppgift
                         invoker.Execute();
                         break;
                 }
-
+                
 
 
 

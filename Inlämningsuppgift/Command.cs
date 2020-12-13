@@ -6,8 +6,8 @@ namespace Inlämningsuppgift
 {
     public abstract class Command
     {
-        private WishList receiver;
-        public Command(WishList receiver)
+        private Wish receiver;
+        public Command(Wish receiver)
         {
             this.receiver = receiver;
         }
