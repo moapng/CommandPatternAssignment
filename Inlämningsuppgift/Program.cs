@@ -21,7 +21,7 @@ namespace Inlämningsuppgift
             {
 
 
-                Console.WriteLine("Would you like to make a new (W)ish, (U)nwish your latest wish or (R)ewish something?");
+                Console.WriteLine("Would you like to make a (W)ish, (U)nwish your latest wish or (R)ewish something?");
                 var choice = Console.ReadKey();
                 switch (choice.Key)
                 {
@@ -34,9 +34,17 @@ namespace Inlämningsuppgift
                         invoker.UnExecute();
                         break;
                     case ConsoleKey.R:
+                        if(wish.unWishStack.Count != 0) { 
                         invoker.SetCommand(reWishCommand);
                         invoker.Execute();
-                        break;
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("There's nothing to rewish!");
+                            break;
+                        }
+                        
                     case ConsoleKey.S:
                         invoker.SetCommand(submitCommand);
                         invoker.Execute();

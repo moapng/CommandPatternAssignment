@@ -26,7 +26,7 @@ namespace Inlämningsuppgift
         public void UnWish()
         {
             letterToSanta.Remove(_wish);
-            
+
             unWishStack.Push(_wish);
             Console.WriteLine(_wish + " has been removed");
             PrintLetterToSanta();
@@ -50,6 +50,14 @@ namespace Inlämningsuppgift
             {
                 Console.WriteLine(wish);
             }
+        }
+        public Wish GetWish()
+        {
+
+            var item = letterToSanta[letterToSanta.Count - 1];
+            var wish = new Wish(item);
+
+            return wish;
         }
     }
 }
