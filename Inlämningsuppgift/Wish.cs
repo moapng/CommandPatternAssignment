@@ -46,18 +46,11 @@ namespace Inlämningsuppgift
         public void PrintLetterToSanta()
         {
             Console.WriteLine("These are your wishes");
-            foreach (string wish in letterToSanta)
+            foreach (string s in letterToSanta)
             {
-                Console.WriteLine(wish);
+                Console.WriteLine(s);
             }
         }
-        public Wish GetWish()
-        {
-
-            var item = letterToSanta[letterToSanta.Count - 1];
-            var wish = new Wish(item);
-
-            return wish;
-        }
+        
     }
 }

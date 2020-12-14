@@ -21,7 +21,7 @@ namespace Inlämningsuppgift
             {
 
 
-                Console.WriteLine("Would you like to make a (W)ish, (U)nwish your latest wish or (R)ewish something?");
+                Console.WriteLine("Would you like to make a (W)ish, (U)nwish your latest wish, (R)ewish something or (S)end your letter ot santa?");
                 var choice = Console.ReadKey();
                 switch (choice.Key)
                 {
@@ -30,6 +30,7 @@ namespace Inlämningsuppgift
                         wish = new Wish(userInput);
                         wishCommand = new WishCommand(wish);
                         reWishCommand = new ReWishCommand(wish);
+                        submitCommand = new SubmitCommand(wish);
                         invoker.SetCommand(wishCommand);
                         invoker.Execute();
                         break;
