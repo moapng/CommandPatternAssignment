@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Inlämningsuppgift
 {
     class Program
     {
+
         static void Main(string[] args)
         {
 
             Console.WriteLine("Make a wish!");
             string userInput = Console.ReadLine();
-            var wish = new Wish(userInput);
+            List<string> letterToSanta = new List<string>();
+            var wish = new Wish(userInput, letterToSanta);
             var wishCommand = new WishCommand(wish);
             var reWishCommand = new ReWishCommand(wish);
             var submitCommand = new SubmitCommand(wish);
@@ -27,10 +30,8 @@ namespace Inlämningsuppgift
                 {
                     case ConsoleKey.W:
                         userInput = Console.ReadLine();
-                        wish = new Wish(userInput);
+                        wish = new Wish(userInput, letterToSanta);
                         wishCommand = new WishCommand(wish);
-                        reWishCommand = new ReWishCommand(wish);
-                        submitCommand = new SubmitCommand(wish);
                         invoker.SetCommand(wishCommand);
                         invoker.Execute();
                         break;
@@ -39,9 +40,11 @@ namespace Inlämningsuppgift
                         invoker.UnExecute();
                         break;
                     case ConsoleKey.R:
-                        if(wish.unWishStack.Count != 0) { 
-                        invoker.SetCommand(reWishCommand);
-                        invoker.Execute();
+                        if (wish.unWishStack.Count != 0)
+                        {
+                            reWishCommand = new ReWishCommand(wish);
+                            invoker.SetCommand(reWishCommand);
+                            invoker.Execute();
                             break;
                         }
                         else
@@ -49,8 +52,8 @@ namespace Inlämningsuppgift
                             Console.WriteLine("There's nothing to rewish!");
                             break;
                         }
-                        
                     case ConsoleKey.S:
+                        submitCommand = new SubmitCommand(wish);
                         invoker.SetCommand(submitCommand);
                         invoker.Execute();
                         break;

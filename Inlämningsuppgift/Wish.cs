@@ -9,23 +9,24 @@ namespace Inlämningsuppgift
     {
         private string _wish;
         public Stack<string> unWishStack = new Stack<string>();
-        public List<string> letterToSanta = new List<string>();
+        public List<string> _letterToSanta = new List<string>();
 
-        public Wish(string wish)
+        public Wish(string wish, List<string> letterToSanta)
         {
             _wish = wish;
+            _letterToSanta = letterToSanta;
         }
 
         public void MakeAWish()
         {
-            letterToSanta.Add(_wish);
+            _letterToSanta.Add(_wish);
             Console.WriteLine(_wish + " has been added");
             PrintLetterToSanta();
         }
 
         public void UnWish()
         {
-            letterToSanta.Remove(_wish);
+            _letterToSanta.Remove(_wish);
 
             unWishStack.Push(_wish);
             Console.WriteLine(_wish + " has been removed");
@@ -46,7 +47,7 @@ namespace Inlämningsuppgift
         public void PrintLetterToSanta()
         {
             Console.WriteLine("These are your wishes");
-            foreach (string s in letterToSanta)
+            foreach (string s in _letterToSanta)
             {
                 Console.WriteLine(s);
             }
