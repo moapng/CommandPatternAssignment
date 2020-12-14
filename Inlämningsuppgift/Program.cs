@@ -26,6 +26,10 @@ namespace Inlämningsuppgift
                 switch (choice.Key)
                 {
                     case ConsoleKey.W:
+                        userInput = Console.ReadLine();
+                        wish = new Wish(userInput);
+                        wishCommand = new WishCommand(wish);
+                        reWishCommand = new ReWishCommand(wish);
                         invoker.SetCommand(wishCommand);
                         invoker.Execute();
                         break;
